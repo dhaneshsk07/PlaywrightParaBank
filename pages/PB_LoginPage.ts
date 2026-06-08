@@ -1,19 +1,18 @@
 import { Page } from '@playwright/test';
 
-export class LC_ProductsPage {
+export class PB_LoginPage {
   page: Page;
 
   constructor(page: Page) {
     this.page = page;
   }
 
-pageObjectModelLink = 'text=Page Object Model'; //xpath stored here ,locator.getByText
 username = '[name="username"]';
 password = '[name="password"]';
 loginBtn = 'text=Login';
 
 //goto products page 
-  async gotoProductsPage(url : string) {
+  async gotoLoginPage(url : string) {
     await this.page.goto(url);
   }
 
@@ -25,11 +24,5 @@ loginBtn = 'text=Login';
     await this.page.click(this.loginBtn);
 
   }
-  async clickOnPageObjectModel() {
-    
-    await this.page.click(this.pageObjectModelLink);
-
-  }
-
-
+ 
 }

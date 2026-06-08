@@ -1,14 +1,14 @@
 import { test, expect } from '@playwright/test';
 //import { config } from '../utils/config';
-import { LC_ProductsPage } from '../pages/LC_ProductsPage';
+import { PB_LoginPage } from '../pages/PB_LoginPage';
 import testData from '../test-data/loginDetails.json';
 
-test('Product Page Check Test', async ({ page }) => {
+test('Para Bank inValid Customer Login', async ({ page }) => {
 
 
-    const productPage = new LC_ProductsPage(page);
+    const loginPage = new PB_LoginPage(page);
 
-    await productPage.gotoProductsPage(
+    await loginPage.gotoLoginPage(
     'https://parabank.parasoft.com/parabank/index.htm');
 
     await page.fill('[name="username"]',testData.loginCredentials.username);
@@ -24,9 +24,11 @@ test('Product Page Check Test', async ({ page }) => {
     //await expect(page.locator('h2')).toHaveText('Account Services'); // this is working )(1 way )
 
     //professional assertion
-    await expect(
-    page.getByRole('heading', { name: 'Account Services' })// this is working )(2nd way)
-    ).toBeVisible();
+    //await expect(
+    //page.getByRole('heading', { name: 'Account Services' })// this is working )(2nd way)
+    //).toBeVisible({ timeout: 10000 });
+
+   await expect(page.locator('.error')).toHaveText('The username and password could not be verified.');
     
 });
 
