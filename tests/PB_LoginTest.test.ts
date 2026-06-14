@@ -5,7 +5,7 @@ import testData from '../test-data/loginDetails.json';
 
 test('Para Bank inValid Customer Login', async ({ page }) => {
 
-
+//test01
     const loginPage = new PB_LoginPage(page);
 
     await loginPage.gotoLoginPage(
@@ -31,4 +31,6 @@ test('Para Bank inValid Customer Login', async ({ page }) => {
    await expect(page.locator('.error')).toHaveText('The username and password could not be verified.');
     
 });
+
+
 

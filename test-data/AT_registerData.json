@@ -1,0 +1,20 @@
+
+{
+  "custRegDetails": {
+    "firstname":"John",
+    "lastname": "Luther",
+    "address" : "Karivlapoikalyil House ,Kaduthuruthy , Kerala ,India",
+    "email" :"johnluther007@gmail.com",
+    "phone" :"987456123", 
+    "skill" : "Adobe Photoshop",
+    "dobYear" : "1990",
+    "dobMonth" : "November",
+    "dobDay" : "30",
+    "country" : "India",
+    "password" :"John@1234",
+    "iconImagePath" : "test-data/sampleIconPW.jpg"
+
+
+  }
+}
+
